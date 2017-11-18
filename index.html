@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Sidebar demo</title>
+        <link rel="stylesheet" type="text/css" href="sidebar.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"> 
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    </head>
+    <body>
+        <div id="nav_button_left"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></div>
+        <div id="nav_left" class="hidden">
+            <span>X</span>
+            <h2>Left menu</h2>
+            <ul>
+                <li>Title 1</li>
+                <li>Title 2</li>
+                <li>Title 3</li>
+                <li>Title 4</li>
+                <li>Title 5</li>
+            </ul>
+        </div>
+        <div id="nav_button_right"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></div>
+        <div id="nav_right" class="hidden">
+            <span>X</span>
+            <h2>Right menu</h2>
+            <ul>
+                <li>Title 1</li>
+                <li>Title 2</li>
+                <li>Title 3</li>
+                <li>Title 4</li>
+                <li>Title 5</li>
+            </ul>
+        </div>
+    </body>
+    <script>
+        // ********** L E F T  M E N U **********
+        // Left navigation button function
+        $("#nav_button_left").click(function() {
+             if($("#nav_left").hasClass("hidden")) {
+                 $("#nav_left").removeClass("hidden");
+                 $("#nav_left").delay(100).fadeIn();
+             } else {
+                 $("#nav_left").addClass("hidden");
+                 $("#nav_left").delay(100).fadeOut();
+             }
+        });
+        // Left navigation menu close button function
+        $("#nav_left span").click(function() {
+           if($("#nav_left").hasClass("hidden")) {
+                 $("#nav_left").removeClass("hidden");
+                 $("#nav_left").delay(100).fadeIn();
+             } else {
+                 $("#nav_left").addClass("hidden");
+                 $("#nav_left").delay(100).fadeOut();
+             } 
+        });
+        // Close left menu on click on body area
+        $("body").on("click",function(event){
+          if(!$(event.target).is("#nav_left, #nav_button_left, #nav_button_left i, #nav_left h2, #nav_left li, #nav_left span, #nav_right, #nav_button_right, #nav_button_right i, #nav_right h2, #nav_right li, #nav_right span")) {
+               $("#nav_left").addClass("hidden");
+               $("#nav_left").delay(100).fadeOut();
+               $("#nav_right").addClass("hidden");
+               $("#nav_right").css("margin-right","0");
+          }
+        });
+        // ********** R I G H T  M E N U **********
+        // Right navigation button function
+        $("#nav_button_right").click(function(){
+            if($("#nav_right").hasClass("hidden")) {
+                $("#nav_right").css("margin-right","390px");
+                $("#nav_right").removeClass("hidden");
+            }
+        });
+        // Right navigation menu close button function
+        $("#nav_right span").click(function() {
+                $("#nav_right").css("margin-right","0");
+                $("#nav_right").addClass("hidden");
+        });
+    </script>
+</html>
