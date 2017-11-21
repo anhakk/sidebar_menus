@@ -16,6 +16,17 @@ body {
     overflow: hidden;
 }
 
+#page_title {
+    width: 100%;
+    font-size: 3.5em;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    letter-spacing: 0.15em;
+    z-index: -1;
+    text-shadow: 3px 3px 4px #000;
+}
+
 #nav_button_left, #nav_button_right {
     width: 100px;
     height: 50px;
@@ -36,7 +47,7 @@ body {
 #nav_left {
     background-color: rgba(0,0,0,0.8);
     color: #fff;
-    width: 20%;
+    width: 300px;
     position: fixed;
     top: 0;
     left: 0;
@@ -48,7 +59,7 @@ body {
 #nav_right {
     background-color: rgba(0,0,0,0.8);
     color: #fff;
-    width: 20%;
+    width: 300px;
     transition: 800ms;
     float: right;
     position: absolute;
@@ -91,4 +102,15 @@ body {
 #nav_left li:hover, #nav_right li:hover {
     opacity: 0.5;
     background-color: #77787a;
+}
+
+/* Narrow screen settings */
+@media screen and (max-width: 800px) {
+    #nav_left, #nav_right {
+        width: 100%;
+        float: none;
+    }
+    #nav_right {
+        right: -1000px;
+    }
 }

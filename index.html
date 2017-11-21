@@ -9,6 +9,7 @@
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     </head>
     <body>
+        <div id="page_title">Sidebar demo</div>
         <div id="nav_button_left"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></div>
         <div id="nav_left" class="hidden">
             <span>X</span>
@@ -77,6 +78,12 @@
         $("#nav_right span").click(function() {
                 $("#nav_right").css("margin-right","0");
                 $("#nav_right").addClass("hidden");
+        });
+        // Right navigation menu narrow screen settings
+        $(window).resize(function() {
+            if ($(window).width() <= 800 && $("#nav_right").hasClass(":not(.hidden)")) {
+                $("#nav_right").css("right","0");
+            }
         });
     </script>
 </html>
