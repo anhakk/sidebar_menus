@@ -1,97 +1,110 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Menu demo</title>
         <meta charset="utf-8"/>
-        <title>Sidebar demo</title>
-        <link rel="stylesheet" type="text/css" href="sidebar.css"/>
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"> 
+        <link rel="stylesheet" type="text/css" href="nav_styles.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet"/>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     </head>
     <body>
-        <div id="page_title">Sidebar demo</div>
-        <span id="mode">narrow mode</span>
-        <div id="nav_button_left"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></div>
-        <div id="nav_left" class="hidden">
-            <span>X</span>
-            <h2>Left menu</h2>
-            <ul>
-                <li>Title 1</li>
-                <li>Title 2</li>
-                <li>Title 3</li>
-                <li>Title 4</li>
-                <li>Title 5</li>
-            </ul>
-            <div class="description"><i>Sidebar menu made by using jQuerys built-in functions fadeIn() and fadeOut() with short delay.</i></div>
+        <div id="titlebar">
+            Menu demo
         </div>
-        <div id="nav_button_right"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></div>
-        <div id="nav_right" class="hidden">
-            <span>X</span>
-            <h2>Right menu</h2>
-            <ul>
-                <li>Title 1</li>
-                <li>Title 2</li>
-                <li>Title 3</li>
-                <li>Title 4</li>
-                <li>Title 5</li>
-            </ul>
-            <div class="description"><i>Sidebar menu made by changing margin-right property of #nav_right element.</i></div>
+        <div id="nav_container">
+            <div id="first_nav" class="nav_elem">
+                <ul>
+                    <li class="inner_menu">Title 1<div class="title_line"></div>
+                        <ul>
+                            <li>Title 1.1</li>
+                            <li>Title 1.2</li>
+                            <li>Title 1.3</li>
+                            <li>Title 1.4</li>
+                            <li>Title 1.5</li>
+                        </ul>
+                    </li>
+                    <li class="inner_menu">Title 2<div class="title_line"></div>
+                        <ul>
+                            <li>Title 2.1</li>
+                            <li>Title 2.2</li>
+                            <li>Title 2.3</li>
+                            <li>Title 2.4</li>
+                            <li>Title 2.5</li>
+                        </ul>
+                    </li>
+                    <li class="inner_menu">Title 3<div class="title_line"></div>
+                        <ul>
+                            <li>Title 3.1</li>
+                            <li>Title 3.2</li>
+                            <li>Title 3.3</li>
+                            <li>Title 3.4</li>
+                            <li>Title 3.5</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="second_nav" class="nav_elem">
+                 <ul>
+                    <li class="inner_menu_js hidden">Title 1<div class="title_line"></div>
+                        <ul>
+                            <li>Title 1.1</li>
+                            <li>Title 1.2</li>
+                            <li>Title 1.3</li>
+                            <li>Title 1.4</li>
+                            <li>Title 1.5</li>
+                        </ul>
+                    </li>
+                    <li class="inner_menu_js hidden">Title 2<div class="title_line"></div>
+                        <ul>
+                            <li>Title 2.1</li>
+                            <li>Title 2.2</li>
+                            <li>Title 2.3</li>
+                            <li>Title 2.4</li>
+                            <li>Title 2.5</li>
+                        </ul>
+                    </li>
+                    <li class="inner_menu_js hidden">Title 3<div class="title_line"></div>
+                        <ul>
+                            <li>Title 3.1</li>
+                            <li>Title 3.2</li>
+                            <li>Title 3.3</li>
+                            <li>Title 3.4</li>
+                            <li>Title 3.5</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
+        <div id="content">
+            <div class="textbox left_align">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+            </div>
+            <div class="textbox right_align">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+            </div>
+        </div>
+        <script>
+            $(".inner_menu_js").click(function() {
+                // Hide open menus from this nav
+                $(".inner_menu_js").children("ul").css("display","none");
+                $(".inner_menu_js").siblings().addClass("hidden");
+                if ($(this).hasClass("hidden")) {
+                    $(this).removeClass("hidden"); $(this).children("ul").css("display","block");
+                } else {
+                    $(this).addClass("hidden"); $(this).children("ul").css("display","none");
+                }
+            });
+            // hide open menus from right nav when clicked outside
+            $("body").click(function(event){
+                if(!$(event.target).is("#second_nav, .inner_menu_js")) {
+                    $(".inner_menu_js").children("ul").css("display","none");
+                    $(".inner_menu_js").siblings().addClass("hidden");
+                }
+            });
+        </script>
     </body>
-    <script>
-        // ********** L E F T  M E N U **********
-        // Left navigation button function
-        $("#nav_button_left").click(function() {
-             if($("#nav_left").hasClass("hidden")) {
-                 $("#nav_left").removeClass("hidden");
-                 $("#nav_left").delay(100).fadeIn();
-             } else {
-                 $("#nav_left").addClass("hidden");
-                 $("#nav_left").delay(100).fadeOut();
-             }
-        });
-        // Left navigation menu close button function
-        $("#nav_left span").click(function() {
-           if($("#nav_left").hasClass("hidden")) {
-                 $("#nav_left").removeClass("hidden");
-                 $("#nav_left").delay(100).fadeIn();
-             } else {
-                 $("#nav_left").addClass("hidden");
-                 $("#nav_left").delay(100).fadeOut();
-             } 
-        });
-        // Close menus on click in body area
-        $("body").on("click",function(event){
-          if(!$(event.target).is("#nav_left, #nav_button_left, #nav_button_left i, #nav_left h2, #nav_left li, #nav_left span, #nav_right, #nav_button_right, #nav_button_right i, #nav_right h2, #nav_right li, #nav_right span")) {
-               $("#nav_left").addClass("hidden");
-               $("#nav_left").delay(100).fadeOut();
-               $("#nav_right").addClass("hidden");
-               $("#nav_right").css("margin-right","0");
-          }
-        });
-        // ********** R I G H T  M E N U **********
-        // Right navigation button function
-        $("#nav_button_right").click(function(){
-            if ($(window).width() > 800 && $("#nav_right").hasClass("hidden")) {
-                $("#nav_right").css("margin-right","390px");
-                $("#nav_right").removeClass("hidden");   
-            } else if ($(window).width() <= 800 && $("#nav_right").hasClass("hidden")) {
-                $("#nav_right").css({"margin-right":"390px","width":"100%"});
-                $("#nav_right").removeClass("hidden");
-            }
-        });
-        // Right navigation menu close button function
-        $("#nav_right span").click(function() {
-                $("#nav_right").css({"margin-right":"0","width":"300px"});
-                $("#nav_right").addClass("hidden");               
-        });
-        // Window resize settings (right menu)
-        $(window).on("resize", function() {
-           if ($(window).width() > 800 && !$("#nav_right").hasClass("hidden")) {
-               $("#nav_right").css({width:"300px"});
-           } else if ($(window).width() <= 800 && !$("#nav_right").hasClass("hidden")){
-               $("#nav_right").css({width:"100%"});
-           }
-        });
-    </script>
 </html>
